@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Office Code",
+    "description": "This is a sample description.",
+    "image": "assets/images/bag_1.png",
+    "price": 234.0,
+    "size": 12.0,
+    "color": "#3D82AE"
+  },
+  {
+    "id": 2,
+    "title": "Belt Bag",
+    "description": "This is a sample description.",
+    "image": "assets/images/bag_2.png",
+    "price": 234.0,
+    "size": 8.0,
+    "color": "#D3A984"
+  },
+  {
+    "id": 3,
+    "title": "Hang Top",
+    "description": "This is a sample description.",
+    "image": "assets/images/bag_3.png",
+    "price": 234.0,
+    "size": 10.0,
+    "color": "#989493"
+  },
+  {
+    "id": 4,
+    "title": "Old Fashion",
+    "description": "This is a sample description.",
+    "image": "assets/images/bag_4.png",
+    "price": 234.0,
+    "size": 11.0,
+    "color": "#E6B398"
+  },
+  {
+    "id": 5,
+    "title": "Office Code",
+    "description": "This is a sample description.",
+    "image": "assets/images/bag_5.png",
+    "price": 234.0,
+    "size": 12.0,
+    "color": "#FB7883"
+  },
+  {
+    "id": 6,
+    "title": "Office Code",
+    "description": "This is a sample description.",
+    "image": "assets/images/bag_6.png",
+    "price": 234.0,
+    "size": 12.0,
+    "color": "#AEAEAE"
+  }
+]
