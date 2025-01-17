@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:online_shop/core/constants/constants.dart';
 import 'package:online_shop/core/widgets/widgets.dart';
+import 'package:online_shop/features/product/product.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -41,6 +42,16 @@ class HomeScreen extends StatelessWidget {
                   .copyWith(fontWeight: FontWeight.bold),
             ),
             TabBar(tabs: ListStrings.categories, isScrollable: true),
+            Flexible(child:
+              TabBarView(
+                children: [
+                  ProductGridView(),
+                  ProductGridView(),
+                  ProductGridView(),
+                  ProductGridView()
+                ],
+              )
+            ),
           ],
         ),
       ),
