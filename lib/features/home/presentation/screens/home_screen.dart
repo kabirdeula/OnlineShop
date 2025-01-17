@@ -33,6 +33,7 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: AppDimensions.padding),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          spacing: 8,
           children: [
             Text(
               'Women',
@@ -42,15 +43,15 @@ class HomeScreen extends StatelessWidget {
                   .copyWith(fontWeight: FontWeight.bold),
             ),
             TabBar(tabs: ListStrings.categories, isScrollable: true),
-            Flexible(child:
-              TabBarView(
+            Flexible(
+              child: TabBarView(
                 children: [
                   ProductGridView(),
                   ProductGridView(),
                   ProductGridView(),
                   ProductGridView()
                 ],
-              )
+              ),
             ),
           ],
         ),
