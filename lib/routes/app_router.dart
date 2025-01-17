@@ -1,5 +1,4 @@
 import 'package:online_shop/features/home/home.dart';
-import 'package:online_shop/routes/app_routes.dart';
 
 import 'routes.dart';
 
