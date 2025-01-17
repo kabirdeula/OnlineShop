@@ -1,3 +1,4 @@
+export './cubit/product_cubit.dart';
 export './data/models/product.dart';
 export './data/repositories/product_repository.dart';
 export './data/sources/local/product_service.dart';
