@@ -20,15 +20,15 @@ class ProductCard extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
-          padding: EdgeInsets.all(AppDimensions.padding),
-          height: 175,
-          width: 160,
-          decoration: BoxDecoration(
-            color: color,
-            borderRadius: BorderRadius.circular(10),
+        Expanded(
+          child: Container(
+            padding: EdgeInsets.all(AppDimensions.padding),
+            decoration: BoxDecoration(
+              color: color,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Image.asset(image),
           ),
-          child: Image.asset(image),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(

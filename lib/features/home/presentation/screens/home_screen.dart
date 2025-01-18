@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                   .copyWith(fontWeight: FontWeight.bold),
             ),
             TabBar(tabs: ListStrings.categories, isScrollable: true),
-            Flexible(
+            Expanded(
               child: TabBarView(
                 children: [
                   ProductGridView(),

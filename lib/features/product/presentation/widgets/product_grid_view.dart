@@ -26,7 +26,7 @@ class ProductGridView extends StatelessWidget {
             itemCount: state.products.length,
             itemBuilder: (context, index) {
               final product = state.products[index];
-
+        
               return ProductCard(
                 color: hexToColor(product.color),
                 image: product.image,
@@ -36,9 +36,9 @@ class ProductGridView extends StatelessWidget {
             },
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              mainAxisSpacing: 10,
-              crossAxisSpacing: 10,
-              childAspectRatio: 0.74,
+              mainAxisSpacing: AppDimensions.padding,
+              crossAxisSpacing: AppDimensions.padding,
+              childAspectRatio: 0.72,
             ),
           ),
         );
