@@ -1,5 +1,7 @@
 enum AppRoutes {
-  initial('/');
+  initial('/'),
+  productDetail('/productDetail'),
+  ;
 
   final String path;
   const AppRoutes(this.path);
