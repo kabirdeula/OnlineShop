@@ -9,7 +9,7 @@ class ProductRepositoryImpl implements ProductRepository {
   @override
   Future<List<Product>> fetchProducts() {
     try {
-      return _service.fetchSavedProducts();
+      return _service.fetchAndSaveProducts();
     } catch (e) {
       return Future.value(<Product>[]);
     }
