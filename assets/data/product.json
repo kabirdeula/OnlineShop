@@ -52,5 +52,32 @@
     "price": 234.0,
     "size": 12.0,
     "color": "#AEAEAE"
+  },
+  {
+    "id": 7,
+    "title": "Old Fashion",
+    "description": "This is a sample description.",
+    "image": "assets/images/bag_4.png",
+    "price": 234.0,
+    "size": 11.0,
+    "color": "#E6B398"
+  },
+  {
+    "id": 8,
+    "title": "Office Code",
+    "description": "This is a sample description.",
+    "image": "assets/images/bag_5.png",
+    "price": 234.0,
+    "size": 12.0,
+    "color": "#FB7883"
+  },
+  {
+    "id": 9,
+    "title": "Office Code",
+    "description": "This is a sample description.",
+    "image": "assets/images/bag_6.png",
+    "price": 234.0,
+    "size": 12.0,
+    "color": "#AEAEAE"
   }
 ]
