@@ -4,6 +4,7 @@ import 'package:online_shop/core/constants/constants.dart';
 import 'package:online_shop/core/utils/utils.dart';
 import 'package:online_shop/features/product/presentation/widgets/product_card.dart';
 import 'package:online_shop/features/product/product.dart';
+import 'package:online_shop/routes/routes.dart';
 
 class ProductGridView extends StatelessWidget {
   const ProductGridView({super.key});
@@ -26,12 +27,16 @@ class ProductGridView extends StatelessWidget {
             itemCount: state.products.length,
             itemBuilder: (context, index) {
               final product = state.products[index];
-        
+
               return ProductCard(
                 color: hexToColor(product.color),
                 image: product.image,
                 price: product.price,
                 title: product.title,
+                onTap: () => context.push(
+                  AppRoutes.productDetail.path,
+                  extra: product,
+                ),
               );
             },
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
