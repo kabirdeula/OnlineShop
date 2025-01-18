@@ -20,12 +20,19 @@ Product _$ProductFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Product {
+  @HiveField(0)
   int get id => throw _privateConstructorUsedError;
+  @HiveField(1)
   String get title => throw _privateConstructorUsedError;
+  @HiveField(2)
   String get description => throw _privateConstructorUsedError;
+  @HiveField(3)
   String get image => throw _privateConstructorUsedError;
+  @HiveField(4)
   double get price => throw _privateConstructorUsedError;
+  @HiveField(5)
   double get size => throw _privateConstructorUsedError;
+  @HiveField(6)
   String get color => throw _privateConstructorUsedError;
 
   /// Serializes this Product to a JSON map.
@@ -43,13 +50,13 @@ abstract class $ProductCopyWith<$Res> {
       _$ProductCopyWithImpl<$Res, Product>;
   @useResult
   $Res call(
-      {int id,
-      String title,
-      String description,
-      String image,
-      double price,
-      double size,
-      String color});
+      {@HiveField(0) int id,
+      @HiveField(1) String title,
+      @HiveField(2) String description,
+      @HiveField(3) String image,
+      @HiveField(4) double price,
+      @HiveField(5) double size,
+      @HiveField(6) String color});
 }
 
 /// @nodoc
@@ -116,13 +123,13 @@ abstract class _$$ProductImplCopyWith<$Res> implements $ProductCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {int id,
-      String title,
-      String description,
-      String image,
-      double price,
-      double size,
-      String color});
+      {@HiveField(0) int id,
+      @HiveField(1) String title,
+      @HiveField(2) String description,
+      @HiveField(3) String image,
+      @HiveField(4) double price,
+      @HiveField(5) double size,
+      @HiveField(6) String color});
 }
 
 /// @nodoc
@@ -181,32 +188,40 @@ class __$$ProductImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 0)
 class _$ProductImpl implements _Product {
   const _$ProductImpl(
-      {required this.id,
-      required this.title,
-      required this.description,
-      required this.image,
-      required this.price,
-      required this.size,
-      required this.color});
+      {@HiveField(0) required this.id,
+      @HiveField(1) required this.title,
+      @HiveField(2) required this.description,
+      @HiveField(3) required this.image,
+      @HiveField(4) required this.price,
+      @HiveField(5) required this.size,
+      @HiveField(6) required this.color});
 
   factory _$ProductImpl.fromJson(Map<String, dynamic> json) =>
       _$$ProductImplFromJson(json);
 
   @override
+  @HiveField(0)
   final int id;
   @override
+  @HiveField(1)
   final String title;
   @override
+  @HiveField(2)
   final String description;
   @override
+  @HiveField(3)
   final String image;
   @override
+  @HiveField(4)
   final double price;
   @override
+  @HiveField(5)
   final double size;
   @override
+  @HiveField(6)
   final String color;
 
   @override
@@ -252,29 +267,36 @@ class _$ProductImpl implements _Product {
 
 abstract class _Product implements Product {
   const factory _Product(
-      {required final int id,
-      required final String title,
-      required final String description,
-      required final String image,
-      required final double price,
-      required final double size,
-      required final String color}) = _$ProductImpl;
+      {@HiveField(0) required final int id,
+      @HiveField(1) required final String title,
+      @HiveField(2) required final String description,
+      @HiveField(3) required final String image,
+      @HiveField(4) required final double price,
+      @HiveField(5) required final double size,
+      @HiveField(6) required final String color}) = _$ProductImpl;
 
   factory _Product.fromJson(Map<String, dynamic> json) = _$ProductImpl.fromJson;
 
   @override
+  @HiveField(0)
   int get id;
   @override
+  @HiveField(1)
   String get title;
   @override
+  @HiveField(2)
   String get description;
   @override
+  @HiveField(3)
   String get image;
   @override
+  @HiveField(4)
   double get price;
   @override
+  @HiveField(5)
   double get size;
   @override
+  @HiveField(6)
   String get color;
 
   /// Create a copy of Product
