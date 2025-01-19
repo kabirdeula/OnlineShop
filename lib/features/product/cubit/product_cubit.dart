@@ -51,4 +51,12 @@ class ProductCubit extends Cubit<ProductState> {
     emit(state.copyWith(selectedColor: color));
     log.i("(ProductCubit) Changed selected color to $color.");
   }
+
+  void incrementCounter() => emit(state.copyWith(counter: state.counter + 1));
+
+  void decrementCounter() {
+    if (state.counter > 1) {
+      emit(state.copyWith(counter: state.counter - 1));
+    }
+  }
 }

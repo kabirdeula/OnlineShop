@@ -42,6 +42,13 @@ class ProductDetailContent extends StatelessWidget {
               style: TextStyle(height: 1.5),
             ),
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              ItemCounter(),
+              SizedBox(width: 75, height: 50, child: Placeholder()),
+            ],
+          )
         ],
       ),
     );
