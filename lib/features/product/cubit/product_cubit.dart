@@ -20,7 +20,7 @@ class ProductCubit extends Cubit<ProductState> {
   Future<void> loadAllProducts() async {
     emit(state.copyWith(isLoading: true));
     try {
-      final productList = await _productUsecase.fetchProducts();
+      final productList = await _productUsecase.fetchAllProducts();
       emit(state.copyWith(isLoading: false, productList: productList));
       log.i("(ProductCubit) Loaded ${productList.length} products.");
     } catch (error) {
@@ -34,9 +34,11 @@ class ProductCubit extends Cubit<ProductState> {
   Future<void> loadProductById({required int productId}) async {
     emit(state.copyWith(isLoading: true));
     try {
-      final product = await _productUsecase.fetchProductById(id: productId);
+      final product =
+          await _productUsecase.fetchProductDetails(productId: productId);
       emit(state.copyWith(isLoading: false, selectedProduct: product));
-      log.i("(ProductCubit) Loaded product with ID $productId: ${product?.title}");
+      log.i(
+          "(ProductCubit) Loaded product with ID $productId: ${product?.title}");
     } catch (error) {
       log.e("(ProductCubit) Failed to load product with ID $productId: $error");
       emit(state.copyWith(isLoading: false));
