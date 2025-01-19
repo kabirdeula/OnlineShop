@@ -10,7 +10,6 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        showBackButton: true,
         actions: [
           IconButton(
             icon: Icon(AppIcons.search, color: AppColors.text),

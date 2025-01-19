@@ -6,7 +6,7 @@ import 'themes.dart';
 class AppThemes {
   static ThemeData themeData() {
     return ThemeData(
-      // appBarTheme: _appBarTheme,
+      appBarTheme: _appBarTheme,
       // elevatedButtonTheme: _elevatedButtonTheme,
       // inputDecorationTheme: _inputDecorationTheme,
       // navigationBarTheme: _navigationBarTheme,
@@ -17,5 +17,7 @@ class AppThemes {
     );
   }
 }
+
+final _appBarTheme = CustomAppBarTheme.defaultConfig().buildAppBarTheme();
 
 final _tabBarTheme = CustomTabBarTheme.defaultConfig().buildTabBarTheme();

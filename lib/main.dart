@@ -20,7 +20,7 @@ void main() async {
     MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => serviceLocator<ProductCubit>()..initialize(),
+          create: (context) => serviceLocator<ProductCubit>()..loadAllProducts(),
         ),
       ],
       child: DevicePreview(
