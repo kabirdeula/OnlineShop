@@ -14,18 +14,18 @@ class AppRouter {
         builder: (context, state) => const HomeScreen(),
       ),
       GoRoute(
-        path: AppRoutes.productDetail.path,
+        path: "${AppRoutes.productDetail.path}/:id",
         name: AppRoutes.productDetail.name,
         builder: (context, state) {
-          final product = state.extra as Product?;
-          if (product == null) {
+          final productID = state.pathParameters['id'];
+          if (productID == null) {
             // Handle the case where product is null
             return const Scaffold(
               body: Center(child: Text('Product not found.')),
             );
           }
           return ProductDetailScreen(
-            product: product,
+            productID: productID,
           );
         },
       ),
