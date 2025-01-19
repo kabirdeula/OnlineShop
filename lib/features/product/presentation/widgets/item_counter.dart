@@ -21,7 +21,7 @@ class ItemCounter extends StatelessWidget {
         BlocBuilder<ProductCubit, ProductState>(
             builder: (context, state) {
           return Text(
-            "${state.counter}",
+            "${state.counter}".padLeft(2, "0"),
             style: Theme.of(context).textTheme.headlineSmall,
           );
         }),
