@@ -43,6 +43,7 @@ class ProductGridView extends StatelessWidget {
       itemBuilder: (context, index) {
         final product = products[index];
         return ProductCard(
+          id: product.id,
           color: hexToColor(product.color),
           image: product.image,
           price: product.price,

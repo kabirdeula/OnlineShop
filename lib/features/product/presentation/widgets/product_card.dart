@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:online_shop/core/constants/constants.dart';
 
 class ProductCard extends StatelessWidget {
+  final int id;
   final Color color;
   final String image;
   final String title;
@@ -10,6 +11,7 @@ class ProductCard extends StatelessWidget {
 
   const ProductCard({
     super.key,
+    required this.id,
     required this.color,
     required this.image,
     required this.title,
@@ -31,7 +33,7 @@ class ProductCard extends StatelessWidget {
                 color: color,
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: Image.asset(image),
+              child: Hero(tag: "$id", child: Image.asset(image)),
             ),
           ),
           Padding(

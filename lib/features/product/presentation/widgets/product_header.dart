@@ -48,7 +48,12 @@ class ProductHeader extends StatelessWidget {
                 ),
               ),
               SizedBox(width: AppDimensions.padding),
-              Expanded(child: Image.asset(product.image)),
+              Expanded(
+                child: Hero(
+                  tag: "${product.id}",
+                  child: Image.asset(product.image),
+                ),
+              ),
             ],
           ),
         ],

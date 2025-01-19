@@ -33,6 +33,7 @@ class ProductDetailContent extends StatelessWidget {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        spacing: AppDimensions.padding * 2.5,
         children: [
           ProductDetailsRow(productColors: productColors, product: product),
           Padding(
@@ -46,7 +47,50 @@ class ProductDetailContent extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               ItemCounter(),
-              SizedBox(width: 75, height: 50, child: Placeholder()),
+              Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.red,
+                ),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    AppIcons.heart,
+                    color: Colors.white,
+                  ),
+                ),
+              )
+            ],
+          ),
+          
+          Row(
+            spacing: 12,
+            children: [
+              Container(
+                padding: EdgeInsets.all(AppDimensions.padding / 3),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 1,
+                    )),
+                child: IconButton(
+                    onPressed: () {}, icon: Icon(AppIcons.addToCart)),
+              ),
+              Expanded(
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: productColors.first,
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                      padding: EdgeInsets.all(AppDimensions.padding)),
+                  onPressed: () {},
+                  child: Text(
+                    "buy now".toUpperCase(),
+                    style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
             ],
           )
         ],
