@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:online_shop/core/constants/constants.dart';
 import 'package:online_shop/core/utils/utils.dart';
-import 'package:online_shop/features/product/presentation/widgets/product_card.dart';
 import 'package:online_shop/features/product/product.dart';
 import 'package:online_shop/routes/routes.dart';
 
