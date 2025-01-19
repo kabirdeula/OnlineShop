@@ -1,5 +1,7 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:online_shop/core/services/services.dart';
 import 'package:online_shop/features/product/product.dart';
 
@@ -43,5 +45,10 @@ class ProductCubit extends Cubit<ProductState> {
       log.e("(ProductCubit) Failed to load product with ID $productId: $error");
       emit(state.copyWith(isLoading: false));
     }
+  }
+
+  void changeSelectedColor(Color color) {
+    emit(state.copyWith(selectedColor: color));
+    log.i("(ProductCubit) Changed selected color to $color.");
   }
 }
